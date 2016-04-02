@@ -1,0 +1,81 @@
+--- !ruby/object:Library
+books:
+- &2 !ruby/object:Book
+  title: Dark Tower
+  author: &1 !ruby/object:Author
+    name: Stiven King
+    biography: ''
+- &4 !ruby/object:Book
+  title: Dark Tower 1
+  author: *1
+- &5 !ruby/object:Book
+  title: Dark Tower 2
+  author: *1
+orders:
+- !ruby/object:Order
+  book: *2
+  reader: &3 !ruby/object:Reader
+    name: Reader_1
+    email: test1@test.ru
+    city: ''
+    street: ''
+    house: ''
+  date: 2016-04-02 18:48:58.564593981 +03:00
+- !ruby/object:Order
+  book: *2
+  reader: *3
+  date: 2016-04-02 18:48:58.564596201 +03:00
+- !ruby/object:Order
+  book: *2
+  reader: *3
+  date: 2016-04-02 18:48:58.564597099 +03:00
+- !ruby/object:Order
+  book: *2
+  reader: &6 !ruby/object:Reader
+    name: Reader_2
+    email: test2@test.ru
+    city: ''
+    street: ''
+    house: ''
+  date: 2016-04-02 18:48:58.564597977 +03:00
+- !ruby/object:Order
+  book: *2
+  reader: &7 !ruby/object:Reader
+    name: Reader_3
+    email: test1@test.ru
+    city: ''
+    street: ''
+    house: ''
+  date: 2016-04-02 18:48:58.564598691 +03:00
+- !ruby/object:Order
+  book: *2
+  reader: &8 !ruby/object:Reader
+    name: Reader_4
+    email: test1@test.ru
+    city: ''
+    street: ''
+    house: ''
+  date: 2016-04-02 18:48:58.564609271 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: *3
+  date: 2016-04-02 18:48:58.564610747 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: 2016-04-02 18:48:58.564611427 +03:00
+- !ruby/object:Order
+  book: *4
+  reader: *7
+  date: 2016-04-02 18:48:58.564611998 +03:00
+- !ruby/object:Order
+  book: *5
+  reader: *8
+  date: 2016-04-02 18:48:58.564612591 +03:00
+readers:
+- *3
+- *6
+- *7
+- *8
+authors:
+- *1
